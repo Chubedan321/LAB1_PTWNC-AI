@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${appName}">Hệ thống</title>
+</head>
+
+<body>
+    <header>
+        <h1 th:text="${appName}">Tên ứng dụng</h1>
+        <nav>
+            <a th:href="@{/home/index}">Trang chủ</a> |
+            <a th:href="@{/home/about}">Giới thiệu</a> |
+            <a th:href="@{/home/help}">Trợ giúp</a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <h2>Giới thiệu dự án</h2>
+        <p>Hệ thống Product Portal xây dựng trên nền tảng Spring Boot MVC.</p>
+        <p><strong>Môn học:</strong> <span th:text="${subject}"></span></p>
+        <p><strong>Học kỳ:</strong> <span th:text="${semester}"></span></p>
+        <p><strong>Thông báo:</strong> <span th:text="${message}"></span></p>
+    </main>
+</body>
+
+</html>
